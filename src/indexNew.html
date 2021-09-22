@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Social Network Visualized</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script>window.$ = window.jQuery = require('jquery');</script>
+	<!-- Online module -->
+	<!-- <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script> -->
+</head>
+
+<body>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<section>
+					<!-- Window -->
+					<div class="row gtr-200">
+						<!-- NetWork Box -->
+						<div class="col-7 col-12-medium">
+							<div class="leftupBox">
+								<div id="myNetwork" class="networkBox">
+								</div>
+							</div>
+							<div class="leftdownBox">
+								<h3>Control</h3>
+								<h4>可以利用鼠标操控上面的网络, 鼠标点击选择某人来查看他的社交网络!</h4>
+								<h5>滑动滚轮可以缩放视图. 节点可以拖拽, 拖拽的时候边自动隐藏, 以便于观察节点分布. 点击某人后: 显示为彩色的节点是直接朋友,
+									显示为黄色的节点是朋友的朋友(潜在的朋友). 缩放以查看姓名, 鼠标悬停于节点上方可以观察具体的信息(国籍, 队伍等等). 软件中数据由真实数据制作而成.</h5>
+								<form method="post" action="#">
+									<div class="row gtr-uniform">
+										<div class="col-4">
+											<select id="dataset">
+												<!-- <option value="">- Choose Dataset -</option> -->
+												<!-- 如果你想要添加自己的数据, 请在这里添加文件名称与路径 -->
+												<option value="./datasets/socialNetwork.js">Social Network</option>
+												<option value="./datasets/worldCup.js">World Cup</option>
+												<option value="./datasets/NetworkWithImages.js">Image Network</option>
+												<option value="./datasets/KarateClub.js">空手道俱乐部</option>
+											</select>
+										</div>
+										<div class="col-3">
+											<ul class="actions">
+												<li><input id="getDataset" value="Load Dataset" class="button primary" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+
+								<!-- SideBar Control -->
+								<div class="col-3">
+									<ul class="actions">
+										<li><input id="reset" value="Reset" class="button" /></li>
+									</ul>
+								</div>
+								<div id="info" class="Box"></div>
+							</div>
+						</div>
+
+						<div class="col-5 col-12-medium">
+							<div class="sideBox">
+								<h3>潜在朋友列表</h3>
+								<div id="right-div">
+									<div id="right-div2">
+										<table id="right-table2">
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!--Scripts -->
+	<!-- defer 延迟加载时间最长的文件可以提高软件整体的加载速度, 提升用户使用体验-->
+	<script defer type="text/javascript" src="./render.js"></script>
+	<!-- <script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script> -->
+</body>
+
+</html>
