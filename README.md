@@ -1,7 +1,7 @@
 # SoVisual
 A tool for visualizing social network and finding potential friends
 
-[image-20210922235251646](assets/image-20210922235251646.png)
+![](assets/image-20210922235251646.png)
 
 ## Featrues
 
